@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Event } from 'src/events/entities/event.entity';
 import { Product } from 'src/products/entities/product.entity';
@@ -14,7 +15,6 @@ import { UserService } from './user.service';
     TypeOrmModule.forFeature([Book], 'default'),
     TypeOrmModule.forFeature([Event], 'default'),
     TypeOrmModule.forFeature([Product], 'default-postgres-2'),
-
     // entire entity if connection's name is same example
     // TypeOrmModule.forFeature([User, Book, Event], 'default')
   ],

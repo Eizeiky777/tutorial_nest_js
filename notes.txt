@@ -19,11 +19,16 @@
       │ sub-app       │ app         │ Generate a new application within a monorepo │
       │ resource      │ res         │ Generate a new CRUD resource
 
-generate dto inside class user example
+
+#1 generate module 
+nest g mo event
+
+#2 generate class + entity example
+nest g class events/entities/event.entity --no-spec
+
+#3 generate dto inside class user example
 nest g class user/dto/create-user.dto --no-spec
 
-generate class + entity example
-nest g class events/entities/event.entity --no-spec
 
 
 create migration manual 
