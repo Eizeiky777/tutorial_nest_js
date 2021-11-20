@@ -21,7 +21,7 @@ export class ProductBrandFactory {
 
 class mockProductService {}
 
-// class ConfigService {}
+class ConfigServiceCustom {}
 class DevelopmentConfigService {}
 class ProductionConfigService {}
 
@@ -41,13 +41,13 @@ class ProductionConfigService {}
     },
 
     // =============== class provider ===============
-    // {
-    //   provide: ConfigService,
-    //   useClass:
-    //     process.env.NODE_ENV === 'development'
-    //       ? DevelopmentConfigService
-    //       : ProductionConfigService,
-    // },
+    {
+      provide: ConfigServiceCustom,
+      useClass:
+        process.env.NODE_ENV === 'development'
+          ? DevelopmentConfigService
+          : ProductionConfigService,
+    },
 
     // =============== class factory ===============
     {

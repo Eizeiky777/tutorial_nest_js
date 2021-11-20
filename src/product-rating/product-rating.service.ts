@@ -15,4 +15,16 @@ export class ProductRatingService {
       productService,
     );
   }
+
+  async find(query) {
+    
+    return 'product rating data'
+  }
+
+  async create(body) {
+    
+    return 'create product rating data'
+  }
+
+
 }
