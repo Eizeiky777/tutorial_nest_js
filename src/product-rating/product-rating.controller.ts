@@ -8,6 +8,7 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
+import { Public } from 'src/common/decorators/public.decorator';
 import { ProductRatingService } from './product-rating.service';
 
 // @UsePipes(ValidationPipe) // will validate entire controller
@@ -17,6 +18,7 @@ export class ProductRatingController {
     console.log('instantiated in controller product rating');
   }
 
+  @Public()
   @Get()
   find(@Query() query: any) {
     return this.productRatingService.find(query);

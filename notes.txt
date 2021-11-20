@@ -19,7 +19,7 @@
       │ sub-app       │ app         │ Generate a new application within a monorepo │
       │ resource      │ res         │ Generate a new CRUD resource
 
-
+==== working_space ====
 #1 generate module 
 nest g mo event
 
@@ -29,6 +29,18 @@ nest g class events/entities/event.entity --no-spec
 #3 generate dto inside class user example
 nest g class user/dto/create-user.dto --no-spec
 
+==== middleware ====
+#1 generate exception filter
+nest g filter common/filters/http-exception
+
+#2 generate guard
+nest g guard common/guards/api-key
+
+#3 generate decorator
+nest g decorator  common/decorators/public.decorator.ts
+
+#4 generate interceptor
+nest g interceptor common/interceptor/wrap-response
 
 
 create migration manual 

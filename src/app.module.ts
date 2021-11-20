@@ -17,6 +17,7 @@ import { ProductRatingService } from './product-rating/product-rating.service';
 import { DatabaseModule } from './database/database.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
+import { CommonModule } from './common/common.module';
 import Joi = require('@hapi/joi');
 import appConfig from 'config/app.config';
 
@@ -74,6 +75,7 @@ const {
     ProductRatingModule,
     ProductsModule,
     DatabaseModule,
+    CommonModule,
 
     //
   ],
