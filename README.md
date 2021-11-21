@@ -80,6 +80,7 @@ $ npm run test:cov
       │ sub-app       │ app         │ Generate a new application within a monorepo │
       │ resource      │ res         │ Generate a new CRUD resource
 
+```bash
 ==== working_space ====
 #1 generate module 
 nest g mo event
@@ -121,6 +122,8 @@ create migration auto
 npm run build dulu yaa
 npx typeorm migration:generate -n SchemaSync 
 npx typeormm migration:run
+
+```
 
 ## Support
 
