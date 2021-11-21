@@ -67,7 +67,7 @@ const {
     // single mongo connection
     // MongooseModule.forRootAsync({
     //   useFactory: () => ({
-    //     uri: 'mongodb+srv://owner:root@bulldogdev.fib6u.mongodb.net/development?retryWrites=true&w=majority',
+    //     uri: '',
     //   }),
     // }),
 
