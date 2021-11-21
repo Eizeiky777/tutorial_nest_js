@@ -37,10 +37,16 @@ nest g filter common/filters/http-exception
 nest g guard common/guards/api-key
 
 #3 generate decorator
-nest g decorator  common/decorators/public.decorator.ts
+nest g decorator  common/decorators/public.decorator
 
 #4 generate interceptor
 nest g interceptor common/interceptor/wrap-response
+
+#5 generate pipe like parse
+nest g pipe common/pipes/parse-int.pipe
+
+#6 generate logging middleware
+nest g middleware common/middleware/logging
 
 
 create migration manual 
