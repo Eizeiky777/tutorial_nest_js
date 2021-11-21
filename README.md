@@ -58,6 +58,70 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Basic shortcut
+           name           alias        description                                  │
+      │ application   │ application │ Generate a new application workspace         │
+      │ class         │ cl          │ Generate a new class                         │
+      │ configuration │ config      │ Generate a CLI configuration file            │
+      │ controller    │ co          │ Generate a controller declaration            │
+      │ decorator     │ d           │ Generate a custom decorator                  │
+      │ filter        │ f           │ Generate a filter declaration                │
+      │ gateway       │ ga          │ Generate a gateway declaration               │
+      │ guard         │ gu          │ Generate a guard declaration                 │
+      │ interceptor   │ in          │ Generate an interceptor declaration          │
+      │ interface     │ interface   │ Generate an interface                        │
+      │ middleware    │ mi          │ Generate a middleware declaration            │
+      │ module        │ mo          │ Generate a module declaration                │
+      │ pipe          │ pi          │ Generate a pipe declaration                  │
+      │ provider      │ pr          │ Generate a provider declaration              │
+      │ resolver      │ r           │ Generate a GraphQL resolver declaration      │
+      │ service       │ s           │ Generate a service declaration               │
+      │ library       │ lib         │ Generate a new library within a monorepo     │
+      │ sub-app       │ app         │ Generate a new application within a monorepo │
+      │ resource      │ res         │ Generate a new CRUD resource
+
+==== working_space ====
+#1 generate module 
+nest g mo event
+
+#2 generate class + entity example
+nest g class events/entities/event.entity --no-spec
+
+#3 generate dto inside class user example
+nest g class user/dto/create-user.dto --no-spec
+
+==== middleware ====
+#1 generate exception filter
+nest g filter common/filters/http-exception
+
+#2 generate guard
+nest g guard common/guards/api-key
+
+#3 generate decorator
+nest g decorator  common/decorators/public.decorator
+
+#4 generate interceptor
+nest g interceptor common/interceptor/wrap-response
+
+#5 generate pipe like parse
+nest g pipe common/pipes/parse-int.pipe
+
+#6 generate logging middleware
+nest g middleware common/middleware/logging
+
+
+create migration manual 
+npm run build dulu yaa
+#1 npx typeorm migration:create -n UserRefactor
+#2 start writing queryrunner
+#3 npx typeorm migration:run 
+#4 npx typeorm migration:revert ( revert migration )
+
+create migration auto
+npm run build dulu yaa
+npx typeorm migration:generate -n SchemaSync 
+npx typeormm migration:run
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
