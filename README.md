@@ -82,6 +82,9 @@ $ npm run test:cov
 
 ```bash
 ==== working_space ====
+#0 create crud
+nest g res modules/your-module-name
+
 #1 generate module 
 nest g mo event
 
